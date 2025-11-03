@@ -1,0 +1,189 @@
+MainBoxLayout
+
+<MainBoxLayout>
+    orientation: "vertical"
+    
+    TextInput:
+        id: text_input
+        size_hint_y: .5
+        #text: root.text_display
+        hint_text: "0"
+        font_size: "50dp"
+        foreground_color: 1,1,1,1
+        multiline: False
+        background_color: 0,0,0,1
+        halign: "right"
+        font_name: "fonts/Astrolab.ttf"
+
+    AnchorLayout:
+        orientation: "horizontal"
+        anchor_x: "center"
+        anchor_y: "top"
+        size_hint_y: .1
+        BoxLayout:
+            orientation: "horizontal"
+            #size_hint_y: .4
+            Button:
+                on_press: root.clear_btn(text_input)
+                text: "CE"
+                size_hint: .5, 1
+                font_size: "25dp"
+                background_color: 0,0,0,1
+                #font_name: "fonts/Astrolab.ttf"
+            
+            Button:
+                id: "del"
+                on_press: root.delete_btn(text_input)
+                text: "<"
+                size_hint: .5, 1
+                font_size: "40dp"
+                background_color: 0,0,0,1
+                #font_name: "fonts/Astrolab.ttf"
+            Button:
+                text: "%"
+                size_hint: .5, 1
+                #height: "20dp"
+                font_name: "fonts/Astrolab.ttf"
+                background_color: 0,0,0,1
+                font_size: "20dp"
+                on_press: root.operator_btn(text_input,"%")
+            
+        
+
+    StackLayout:
+        orientation: "lr-bt"
+        spacing: 1
+        padding: 5
+        
+        Button:
+            id: 0
+            text: "0"
+            size_hint: .25, .25
+            font_size: "30dp"
+            background_color: 1,.7,.5,1
+            font_name: "fonts/Astrolab.ttf"
+            on_press: root.number_btn(text_input,number="0")
+        Button:
+            
+            text: "."
+            size_hint: .25, .25
+            #height: "70dp"
+            font_size: "30dp"
+            background_color: 1,.7,.5,1
+            font_name: "fonts/Astrolab.ttf"
+            on_press: root.operator_btn(text_input,".")
+        Button:
+            
+            text: "/"
+            size_hint: .25, .25
+            #height: "70dp"
+            background_color: 1,.7,.5,1
+            font_size: "30dp"
+            font_name: "fonts/Astrolab.ttf"
+            on_press: root.operator_btn(text_input,"/")
+        Button:
+            
+            text: "="
+            size_hint: .25, .25
+            #height: "70dp"
+            font_size: "30dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: 0,1,0,1
+            on_press: root.result_btn(text_input)
+        Button:
+            text: "1"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="1")
+        Button:
+            text: "2"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="2")
+        Button:
+            text: "3"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="3")
+        Button:
+            text: "x"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: 1,.7,.5,1
+            font_size: "30dp"
+            on_press: root.operator_btn(text_input,"x")
+        Button:
+            text: "4"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="4")
+        Button:
+            text: "5"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="5")
+        Button:
+            text: "6"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="6")
+        Button:
+            text: "-"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: 1,.7,.5,1
+            font_size: "30dp"
+            on_press: root.operator_btn(text_input,"-")
+        Button:
+            text: "7"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="7")
+        Button:
+            text: "8"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="8")
+        Button:
+            text: "9"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: .5,.5,.5,1
+            font_size: "30dp"
+            on_press: root.number_btn(text_input,number="9")
+        Button:
+            text: "+"
+            size_hint: .25, .25
+            #height: "70dp"
+            font_name: "fonts/Astrolab.ttf"
+            background_color: 1,.7,.5,1
+            font_size: "30dp"
+            on_press: root.operator_btn(text_input,"+")
+        
