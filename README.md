@@ -2,7 +2,7 @@
 
 Simple calculator app built with Kivy (Python). Provides basic arithmetic, percent calculations, decimal support and a touchscreen-friendly UI.
 
-<img width="793" height="597" alt="Screenshot 2025-11-03 at 6 02 02 PM" src="https://github.com/user-attachments/assets/78b3a0ee-3f35-40de-8cda-46ce5ce87cec" />
+<img width="940" height="788" alt="Untitled design" src="https://github.com/user-attachments/assets/b3c68367-8394-4a02-8065-9f2eef037550" />
 
 ## Features
 - Basic arithmetic: +, -, × (entered as `x`), ÷
