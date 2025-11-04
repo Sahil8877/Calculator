@@ -1,4 +1,4 @@
-# Kivy Calculator
+# Kivy Calculator ✖️➕➗
 
 Simple calculator app built with Kivy (Python). Provides basic arithmetic, percent calculations, decimal support and a touchscreen-friendly UI.
 
