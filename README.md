@@ -24,16 +24,67 @@ Simple calculator app built with Kivy (Python). Provides basic arithmetic, perce
    python3 -m venv .venv
    source .venv/bin/activate
    ```
-2. Upgrade packaging tools and install Kivy:
+2. Install Kivy:
    ```bash
-   python -m pip install --upgrade pip setuptools wheel
    python -m pip install kivy
    ```
-
+   
 ## Run
-From the project directory:
+From the project directory within virtual env:
 ```bash
 python main.py
+```
+
+## Building APK file 
+From the project directory:
+The following will install necessary packages for Buildozer
+```bash
+pip install buildozer
+```
+
+Once installed, we need to initialize the buildozer spec file, the command is:
+```bash
+buildozer init
+```
+
+Check your spec file and update the following if required :
+```bash
+# Your app name and package
+title = Calculator #the name of the project
+package.name = calculator #the name of your app
+package.domain = org.sahilapps #domain name if required
+
+# Path to your main.py
+source.dir = . #add specific path if you have buildozer intialized in a different dir
+source.include_exts = py, kv, png, jpg, jpeg, gif, wav, mp3, txt, ttf #mention all types of files being processed in your app
+
+# The main Python file that starts your app
+main.py = main.py 
+```
+
+Once confimed and saved, we need to start building our package, type in:
+```bash
+buildozer -v android debug
+```
+
+Once the process is completed, you will find your APK file in your bin directory inside your buildozer folder.
+
+##Issues which you might encounter:
+**The following was tested on MacOS**
+
+Error:
+```bash
+# Buildozer failed to execute the last comman. The error might be hidden in the log above this error. Please read the full log, and search for it before raising an issue with buildozer itself. In case of a bug report, please add a full log with log_level = 2
+```
+
+Possible fix:
+
+This error was mostly caused due to mismatch between the specified version of app NDK, with the actual required version. To fix this I modified the following lines in buildozer.spec file:
+```bash
+android.ndk_version = 25b
+android.ndk_api = 21
+android.sdk_path = /Users/user_name/.buildozer/android/platform/android-sdk
+android.ndk_path = /Users/user_name/.buildozer/android/platform/android-ndk-r25b
 ```
 
 ## Usage
