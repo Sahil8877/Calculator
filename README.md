@@ -69,7 +69,7 @@ buildozer -v android debug
 
 Once the process is completed, you will find your APK file in your bin directory inside your buildozer folder.
 
-##Issues which you might encounter:
+## Issues which you might encounter:
 **The following was tested on MacOS**
 
 Error:
