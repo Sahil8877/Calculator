@@ -5,15 +5,19 @@ MainBoxLayout
     
     TextInput:
         id: text_input
-        size_hint_y: .5
-        #text: root.text_display
+        size_hint_y: .4
         hint_text: "0"
         font_size: "50dp"
-        foreground_color: 1,1,1,1
+        foreground_color: 1, 1, 1, 1
         multiline: False
-        background_color: 0,0,0,1
-        halign: "right"
+        background_color: 0, 0, 0, 1
         font_name: "fonts/Astrolab.ttf"
+        text_size: self.size  # enables text alignment to take effect
+        # The key part 👇
+        halign: "right"
+        valign: "bottom"
+        
+
 
     AnchorLayout:
         orientation: "horizontal"
