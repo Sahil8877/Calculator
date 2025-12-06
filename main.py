@@ -42,11 +42,14 @@ class MainBoxLayout(BoxLayout):
     # ---------------------------------------------------------
     # Dynamically adjusts font size based on input length
     # ---------------------------------------------------------
-    def dynamic_font_size(self, textinput):
-        if len(textinput.text) > 8:
-            textinput.font_size = sp(18)
+    def dynamic_font_size(self, text_input):
+        length = len(text_input.text)
+        if length <= 6:
+            text_input.font_size = sp(50)
+        elif length <= 12:
+            text_input.font_size = sp(25)
         else:
-            textinput.font_size = sp(50)
+            text_input.font_size = sp(20)
 
     # ---------------------------------------------------------
     # Validates numeric and operator inputs before insertion
