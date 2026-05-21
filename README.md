@@ -1,4 +1,4 @@
-# Kivy Calculator ✖️➕➗
+## Kivy Calculator ✖️➕➗
 
 Simple calculator app built with Kivy (Python). Provides basic arithmetic, percent calculations, decimal support and a touchscreen-friendly UI.
 
@@ -101,9 +101,5 @@ android.ndk_path = /Users/user_name/.buildozer/android/platform/android-ndk-r25b
 ## Project structure
 - `main.py` — main Kivy app and logic
 - `*.kv` — Kivy language files
-
-## Contributing
-- Pull requests and issues welcome.
-- Keep changes focused and include brief descriptions of behavior changes.
 
 
